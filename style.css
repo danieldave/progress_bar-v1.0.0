@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background-color: #6d597a;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background-color:#eaac8b ;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.container .skill-box{
+    width: 100%;
+    margin: 20px 0;
+}
+.skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #355d70;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: #e88c7d;
+}
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #e56b6f;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.c{
+    width: 80%;
+    animation-delay: 0.2s;
+}
+.skill-per.j{
+    width: 50%;
+    animation-delay: 0.3s;
+}
+.skill-per.r{
+    width: 70%;
+    animation-delay: 0.4s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -24px;
+    font-size: 9px;
+    font-weight: 500;
+    color: white;
+    padding: 2px;
+    border-radius: 3px;
+    background: #355d70;
+    z-index: 10000;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -789;
+    background-color: #355d70;
+    transform: translateX(-50%) rotate(45deg);
+}
